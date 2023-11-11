@@ -48,7 +48,7 @@ def post():
     return JSONResponse(vars(post_db[-1]))
 
 @app.get('/dog')
-def get_dogs(kind: DogType | None = None):
+def get_dogs(kind: DogType = None):
     if kind is None:
         return JSONResponse([vars(dog) for dog in dogs_db.values()])
     return JSONResponse([vars(dog) for dog in dogs_db.values() if dog.kind == kind])
