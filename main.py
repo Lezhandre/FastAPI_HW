@@ -1,9 +1,8 @@
 from enum import Enum
+from time import time
 from fastapi import FastAPI
 from pydantic import BaseModel
-from starlette import status
 from starlette.responses import JSONResponse
-from time import time
 
 app = FastAPI()
 
